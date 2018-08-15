@@ -122,6 +122,11 @@ public class KytheEntrySets {
     return new NodeBuilder(kind, language);
   }
 
+  public NodeBuilder newNode(NodeKind kind, VName source) {
+    getStatisticsCollector().incrementCounter("new-node-" + kind);
+    return new NodeBuilder(kind, source);
+  }
+
   /** Returns (and emits) a new builtin node. */
   public EntrySet newBuiltinAndEmit(String name) {
     return newBuiltinAndEmit(name, Optional.empty());
