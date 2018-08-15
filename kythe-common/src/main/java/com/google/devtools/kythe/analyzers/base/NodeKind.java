@@ -48,7 +48,13 @@ public enum NodeKind {
   VARIABLE_FIELD("variable", "field"),
   VARIABLE_LOCAL("variable", "local"),
   VARIABLE_PARAMETER("variable", "local/parameter"),
-  VARIABLE_RESOURCE("variable", "local/resource");
+  VARIABLE_RESOURCE("variable", "local/resource"),
+
+  // Kotlin kinds
+  PROPERTY("property"),
+  PROPERTY_LOCAL("property", "local"),
+  OBJECT("constant", "object"),
+  COMPANION("constant", "companion");
 
   private final String kind;
   @Nullable private final String subkind;
