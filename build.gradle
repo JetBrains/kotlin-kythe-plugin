@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.2.60'
+    id 'com.github.johnrengelman.shadow' version '2.0.4'
 }
 
 group 'org.jetbrains'
@@ -16,10 +17,17 @@ repositories {
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-    compile 'org.jetbrains.kotlin:kotlin-compiler:1.2.70-dev-1246'
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    compileOnly 'org.jetbrains.kotlin:kotlin-compiler:1.2.70-dev-1246'
     compile project(':kythe-common')
     testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+shadowJar {
+    dependencies {
+        exclude(dependency('org.jetbrains.kotlin:kotlin-compiler:1.2.70-dev-1246'))
+        exclude(dependency('org.jetbrains.kotlin:kotlin-stdlib-jdk8'))
+    }
 }
 
 compileKotlin {
