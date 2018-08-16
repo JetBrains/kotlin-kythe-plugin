@@ -1,0 +1,42 @@
+CLASS INTERFACE name:TestInterface modality:ABSTRACT visibility:public flags: superTypes:[kotlin.Any]
+INTERFACE:TestInterface<T>
+    TYPE_PARAMETER name:T index:0 variance: superTypes:[kotlin.Any?]
+    TPARAM:TestInterface<T>~T
+
+    CLASS INTERFACE name:TestNestedInterface modality:ABSTRACT visibility:public flags: superTypes:[kotlin.Any]
+    INTERFACE:TestInterface<T>.TestNestedInterface<TT>
+        TYPE_PARAMETER name:TT index:0 variance: superTypes:[kotlin.Any?]
+        TPARAM:TestInterface<T>.TestNestedInterface<TT>~TT
+
+
+
+CLASS CLASS name:Test modality:FINAL visibility:public flags: superTypes:[kotlin.Any]
+CLASS:Test<T0>
+    TYPE_PARAMETER name:T0 index:0 variance: superTypes:[kotlin.Any?]
+    TPARAM:Test<T0>~T0
+
+    CONSTRUCTOR visibility:public <> () returnType:Test<T0> flags:primary
+    CTOR:Test<T0>.Test();Test<T0>
+
+    CLASS CLASS name:TestNested modality:FINAL visibility:public flags: superTypes:[kotlin.Any]
+    CLASS:Test<T0>.TestNested<T1>
+        TYPE_PARAMETER name:T1 index:0 variance: superTypes:[kotlin.Any?]
+        TPARAM:Test<T0>.TestNested<T1>~T1
+
+        CONSTRUCTOR visibility:public <> () returnType:Test.TestNested<T1> flags:primary
+        CTOR:Test<T0>.TestNested<T1>.TestNested();Test<T0>.TestNested<T1>
+
+
+    CLASS CLASS name:TestInner modality:FINAL visibility:public flags:inner superTypes:[kotlin.Any]
+    CLASS:Test<T0>$TestInner<T2>
+        TYPE_PARAMETER name:T2 index:0 variance: superTypes:[kotlin.Any?]
+        TPARAM:Test<T0>$TestInner<T2>~T2
+
+        CONSTRUCTOR visibility:public <> ($this:Test<T0>) returnType:Test<T0>.TestInner<T2> flags:primary
+        CTOR:Test<T0>$TestInner<T2>.TestInner();Test<T0>$TestInner<T2,Test<T0>~T0>
+            VALUE_PARAMETER name:<this> type:Test<T0> flags:
+            VPARAM:Test<T0>$TestInner<T2>.TestInner()#<this>;Test<T0>
+
+
+
+

@@ -1,0 +1,45 @@
+CLASS INTERFACE name:A modality:ABSTRACT visibility:public flags: superTypes:[kotlin.Any]
+INTERFACE:A
+    FUN name:i visibility:public modality:ABSTRACT <> ($this:A) returnType:kotlin.IntArray flags:
+    FUN:A.i();kotlin.IntArray
+        VALUE_PARAMETER name:<this> type:A flags:
+        VPARAM:A.i()#<this>;A
+
+
+    FUN name:l visibility:public modality:ABSTRACT <> ($this:A) returnType:kotlin.LongArray flags:
+    FUN:A.l();kotlin.LongArray
+        VALUE_PARAMETER name:<this> type:A flags:
+        VPARAM:A.l()#<this>;A
+
+
+    FUN name:bt visibility:public modality:ABSTRACT <> ($this:A) returnType:kotlin.ByteArray flags:
+    FUN:A.bt();kotlin.ByteArray
+        VALUE_PARAMETER name:<this> type:A flags:
+        VPARAM:A.bt()#<this>;A
+
+
+    FUN name:sh visibility:public modality:ABSTRACT <> ($this:A) returnType:kotlin.ShortArray flags:
+    FUN:A.sh();kotlin.ShortArray
+        VALUE_PARAMETER name:<this> type:A flags:
+        VPARAM:A.sh()#<this>;A
+
+
+    FUN name:d visibility:public modality:ABSTRACT <> ($this:A) returnType:kotlin.DoubleArray flags:
+    FUN:A.d();kotlin.DoubleArray
+        VALUE_PARAMETER name:<this> type:A flags:
+        VPARAM:A.d()#<this>;A
+
+
+    FUN name:f visibility:public modality:ABSTRACT <> ($this:A) returnType:kotlin.FloatArray flags:
+    FUN:A.f();kotlin.FloatArray
+        VALUE_PARAMETER name:<this> type:A flags:
+        VPARAM:A.f()#<this>;A
+
+
+    FUN name:b visibility:public modality:ABSTRACT <> ($this:A) returnType:kotlin.BooleanArray flags:
+    FUN:A.b();kotlin.BooleanArray
+        VALUE_PARAMETER name:<this> type:A flags:
+        VPARAM:A.b()#<this>;A
+
+
+

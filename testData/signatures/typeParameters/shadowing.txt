@@ -1,0 +1,30 @@
+CLASS CLASS name:Host modality:FINAL visibility:public flags: superTypes:[kotlin.Any]
+CLASS:Host<T>
+    TYPE_PARAMETER name:T index:0 variance: superTypes:[kotlin.Any?]
+    TPARAM:Host<T>~T
+
+    CONSTRUCTOR visibility:public <> () returnType:Host<T> flags:primary
+    CTOR:Host<T>.Host();Host<T>
+
+    FUN name:capturedFromHost visibility:public modality:FINAL <> ($this:Host<T>, x:T) returnType:kotlin.Unit flags:
+    FUN:Host<T>.capturedFromHost(Host<T>~T);kotlin.Unit
+        VALUE_PARAMETER name:<this> type:Host<T> flags:
+        VPARAM:Host<T>.capturedFromHost(Host<T>~T)#<this>;Host<T>
+
+        VALUE_PARAMETER name:x index:0 type:T flags:
+        VPARAM:Host<T>.capturedFromHost(Host<T>~T)#x;Host<T>~T
+
+
+    FUN name:shadowsHostParam visibility:public modality:FINAL <T> ($this:Host<T>, j:T) returnType:kotlin.Unit flags:
+    FUN:Host<T>.<T>shadowsHostParam(T);kotlin.Unit
+        TYPE_PARAMETER name:T index:0 variance: superTypes:[kotlin.Any?]
+        TPARAM:Host<T>.<T>shadowsHostParam(T)~T
+
+        VALUE_PARAMETER name:<this> type:Host<T> flags:
+        VPARAM:Host<T>.<T>shadowsHostParam(T)#<this>;Host<T>
+
+        VALUE_PARAMETER name:j index:0 type:T flags:
+        VPARAM:Host<T>.<T>shadowsHostParam(T)#j;Host<T>.<T>shadowsHostParam(T)~T
+
+
+

@@ -1,0 +1,51 @@
+CLASS INTERFACE name:A modality:ABSTRACT visibility:public flags: superTypes:[kotlin.Any]
+INTERFACE:A
+    PROPERTY name:i visibility:public modality:ABSTRACT flags:val
+    PROP:A.i;kotlin.Int
+
+    PROPERTY name:ni visibility:public modality:ABSTRACT flags:val
+    PROP:A.ni;kotlin.Int?
+
+    PROPERTY name:l visibility:public modality:ABSTRACT flags:val
+    PROP:A.l;kotlin.Long
+
+    PROPERTY name:nl visibility:public modality:ABSTRACT flags:val
+    PROP:A.nl;kotlin.Long?
+
+    PROPERTY name:sh visibility:public modality:ABSTRACT flags:val
+    PROP:A.sh;kotlin.Short
+
+    PROPERTY name:nsh visibility:public modality:ABSTRACT flags:val
+    PROP:A.nsh;kotlin.Short?
+
+    PROPERTY name:bt visibility:public modality:ABSTRACT flags:val
+    PROP:A.bt;kotlin.Byte
+
+    PROPERTY name:nbt visibility:public modality:ABSTRACT flags:val
+    PROP:A.nbt;kotlin.Byte?
+
+    PROPERTY name:d visibility:public modality:ABSTRACT flags:val
+    PROP:A.d;kotlin.Double
+
+    PROPERTY name:nd visibility:public modality:ABSTRACT flags:val
+    PROP:A.nd;kotlin.Double?
+
+    PROPERTY name:f visibility:public modality:ABSTRACT flags:val
+    PROP:A.f;kotlin.Float
+
+    PROPERTY name:nf visibility:public modality:ABSTRACT flags:val
+    PROP:A.nf;kotlin.Float?
+
+    PROPERTY name:s visibility:public modality:ABSTRACT flags:val
+    PROP:A.s;kotlin.String
+
+    PROPERTY name:ns visibility:public modality:ABSTRACT flags:val
+    PROP:A.ns;kotlin.String?
+
+    PROPERTY name:b visibility:public modality:ABSTRACT flags:val
+    PROP:A.b;kotlin.Boolean
+
+    PROPERTY name:bl visibility:public modality:ABSTRACT flags:val
+    PROP:A.bl;kotlin.Boolean?
+
+

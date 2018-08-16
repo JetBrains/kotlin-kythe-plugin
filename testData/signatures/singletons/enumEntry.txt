@@ -1,0 +1,42 @@
+CLASS ENUM_CLASS name:Z modality:FINAL visibility:public flags: superTypes:[kotlin.Enum<Z>]
+ENUM:Z
+    CONSTRUCTOR visibility:private <> () returnType:Z flags:primary
+    CTOR:Z.Z();Z
+
+    ENUM_ENTRY name:ENTRY
+    ENUM_ENTRY:Z.ENTRY
+        CLASS ENUM_ENTRY name:ENTRY modality:FINAL visibility:public flags: superTypes:[Z]
+        ENUM_ENTRY:Z.ENTRY
+            CONSTRUCTOR visibility:private <> () returnType:Z.ENTRY flags:primary
+            CTOR:Z.ENTRY.ENTRY();Z.ENTRY
+
+            FUN name:test visibility:public modality:FINAL <> ($this:Z.ENTRY) returnType:kotlin.Unit flags:
+            FUN:Z.ENTRY.test();kotlin.Unit
+                VALUE_PARAMETER name:<this> type:Z.ENTRY flags:
+                VPARAM:Z.ENTRY.test()#<this>;Z.ENTRY
+
+
+            CLASS CLASS name:A modality:FINAL visibility:public flags: superTypes:[kotlin.Any]
+            CLASS:Z.ENTRY.A
+                CONSTRUCTOR visibility:public <> () returnType:Z.ENTRY.A flags:primary
+                CTOR:Z.ENTRY.A.A();Z.ENTRY.A
+
+                FUN name:test2 visibility:public modality:FINAL <> ($this:Z.ENTRY.A) returnType:kotlin.Unit flags:
+                FUN:Z.ENTRY.A.test2();kotlin.Unit
+                    VALUE_PARAMETER name:<this> type:Z.ENTRY.A flags:
+                    VPARAM:Z.ENTRY.A.test2()#<this>;Z.ENTRY.A
+
+
+
+
+
+    FUN ENUM_CLASS_SPECIAL_MEMBER name:values visibility:public modality:FINAL <> () returnType:kotlin.Array<Z> flags:
+    FUN:Z.values();kotlin.Array<Z>
+
+    FUN ENUM_CLASS_SPECIAL_MEMBER name:valueOf visibility:public modality:FINAL <> (value:kotlin.String) returnType:Z flags:
+    FUN:Z.valueOf(kotlin.String);Z
+        VALUE_PARAMETER name:value index:0 type:kotlin.String flags:
+        VPARAM:Z.valueOf(kotlin.String)#value;kotlin.String
+
+
+

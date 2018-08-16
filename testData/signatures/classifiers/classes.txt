@@ -1,0 +1,30 @@
+CLASS CLASS name:TestClass modality:FINAL visibility:public flags: superTypes:[kotlin.Any]
+CLASS:TestClass
+    CONSTRUCTOR visibility:public <> () returnType:TestClass flags:primary
+    CTOR:TestClass.TestClass();TestClass
+
+
+CLASS INTERFACE name:TestInterface modality:ABSTRACT visibility:public flags: superTypes:[kotlin.Any]
+INTERFACE:TestInterface
+
+CLASS OBJECT name:TestObject modality:FINAL visibility:public flags: superTypes:[kotlin.Any]
+OBJ:TestObject
+    CONSTRUCTOR visibility:private <> () returnType:TestObject flags:primary
+    CTOR:TestObject.TestObject();TestObject
+
+
+CLASS ENUM_CLASS name:TestEnumClass modality:FINAL visibility:public flags: superTypes:[kotlin.Enum<TestEnumClass>]
+ENUM:TestEnumClass
+    CONSTRUCTOR visibility:private <> () returnType:TestEnumClass flags:primary
+    CTOR:TestEnumClass.TestEnumClass();TestEnumClass
+
+    FUN ENUM_CLASS_SPECIAL_MEMBER name:values visibility:public modality:FINAL <> () returnType:kotlin.Array<TestEnumClass> flags:
+    FUN:TestEnumClass.values();kotlin.Array<TestEnumClass>
+
+    FUN ENUM_CLASS_SPECIAL_MEMBER name:valueOf visibility:public modality:FINAL <> (value:kotlin.String) returnType:TestEnumClass flags:
+    FUN:TestEnumClass.valueOf(kotlin.String);TestEnumClass
+        VALUE_PARAMETER name:value index:0 type:kotlin.String flags:
+        VPARAM:TestEnumClass.valueOf(kotlin.String)#value;kotlin.String
+
+
+

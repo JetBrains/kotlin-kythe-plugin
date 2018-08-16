@@ -1,0 +1,24 @@
+CLASS CLASS name:Outer modality:FINAL visibility:public flags: superTypes:[kotlin.Any]
+CLASS:Outer
+    CONSTRUCTOR visibility:public <> () returnType:Outer flags:primary
+    CTOR:Outer.Outer();Outer
+
+    CLASS CLASS name:TestInnerClass modality:OPEN visibility:public flags:inner superTypes:[kotlin.Any]
+    CLASS:Outer$TestInnerClass
+        CONSTRUCTOR visibility:public <> ($this:Outer) returnType:Outer.TestInnerClass flags:primary
+        CTOR:Outer$TestInnerClass.TestInnerClass();Outer$TestInnerClass
+            VALUE_PARAMETER name:<this> type:Outer flags:
+            VPARAM:Outer$TestInnerClass.TestInnerClass()#<this>;Outer
+
+
+
+    CLASS CLASS name:DerivedInnerClass modality:FINAL visibility:public flags:inner superTypes:[Outer.TestInnerClass]
+    CLASS:Outer$DerivedInnerClass
+        CONSTRUCTOR visibility:public <> ($this:Outer) returnType:Outer.DerivedInnerClass flags:primary
+        CTOR:Outer$DerivedInnerClass.DerivedInnerClass();Outer$DerivedInnerClass
+            VALUE_PARAMETER name:<this> type:Outer flags:
+            VPARAM:Outer$DerivedInnerClass.DerivedInnerClass()#<this>;Outer
+
+
+
+

@@ -1,0 +1,174 @@
+CLASS CLASS name:Test1 modality:FINAL visibility:public flags: superTypes:[kotlin.Any]
+CLASS:Test1<T1, T2>
+    TYPE_PARAMETER name:T1 index:0 variance: superTypes:[kotlin.Any?]
+    TPARAM:Test1<T1, T2>~T1
+
+    TYPE_PARAMETER name:T2 index:1 variance: superTypes:[kotlin.Any?]
+    TPARAM:Test1<T1, T2>~T2
+
+    CONSTRUCTOR visibility:public <> (x:T1, y:T2) returnType:Test1<T1, T2> flags:primary
+    CTOR:Test1<T1, T2>.Test1(Test1<T1, T2>~T1, Test1<T1, T2>~T2);Test1<T1,T2>
+        VALUE_PARAMETER name:x index:0 type:T1 flags:
+        VPARAM:Test1<T1, T2>.Test1(Test1<T1, T2>~T1, Test1<T1, T2>~T2)#x;Test1<T1, T2>~T1
+
+        VALUE_PARAMETER name:y index:1 type:T2 flags:
+        VPARAM:Test1<T1, T2>.Test1(Test1<T1, T2>~T1, Test1<T1, T2>~T2)#y;Test1<T1, T2>~T2
+
+
+    PROPERTY name:x visibility:public modality:FINAL flags:val
+    PROP:Test1<T1, T2>.x;Test1<T1, T2>~T1
+        FIELD PROPERTY_BACKING_FIELD name:x type:T1 visibility:public flags:final
+        BFIELD:Test1<T1, T2>.x#field
+
+        FUN DEFAULT_PROPERTY_ACCESSOR name:<get-x> visibility:public modality:FINAL <> ($this:Test1<T1, T2>) returnType:T1 flags:
+        FUN:Test1<T1, T2>.x.<get-x>();Test1<T1, T2>~T1
+            VALUE_PARAMETER name:<this> type:Test1<T1, T2> flags:
+            VPARAM:Test1<T1, T2>.x.<get-x>()#<this>;Test1<T1,T2>
+
+
+
+    PROPERTY name:y visibility:public modality:FINAL flags:val
+    PROP:Test1<T1, T2>.y;Test1<T1, T2>~T2
+        FIELD PROPERTY_BACKING_FIELD name:y type:T2 visibility:public flags:final
+        BFIELD:Test1<T1, T2>.y#field
+
+        FUN DEFAULT_PROPERTY_ACCESSOR name:<get-y> visibility:public modality:FINAL <> ($this:Test1<T1, T2>) returnType:T2 flags:
+        FUN:Test1<T1, T2>.y.<get-y>();Test1<T1, T2>~T2
+            VALUE_PARAMETER name:<this> type:Test1<T1, T2> flags:
+            VPARAM:Test1<T1, T2>.y.<get-y>()#<this>;Test1<T1,T2>
+
+
+
+
+CLASS CLASS name:Test2 modality:FINAL visibility:public flags: superTypes:[kotlin.Any]
+CLASS:Test2
+    CONSTRUCTOR visibility:public <> (x:kotlin.Int, y:kotlin.String) returnType:Test2 flags:primary
+    CTOR:Test2.Test2(kotlin.Int, kotlin.String);Test2
+        VALUE_PARAMETER name:x index:0 type:kotlin.Int flags:
+        VPARAM:Test2.Test2(kotlin.Int, kotlin.String)#x;kotlin.Int
+
+        VALUE_PARAMETER name:y index:1 type:kotlin.String flags:
+        VPARAM:Test2.Test2(kotlin.Int, kotlin.String)#y;kotlin.String
+
+
+    PROPERTY name:y visibility:public modality:FINAL flags:val
+    PROP:Test2.y;kotlin.String
+        FIELD PROPERTY_BACKING_FIELD name:y type:kotlin.String visibility:public flags:final
+        BFIELD:Test2.y#field
+
+        FUN DEFAULT_PROPERTY_ACCESSOR name:<get-y> visibility:public modality:FINAL <> ($this:Test2) returnType:kotlin.String flags:
+        FUN:Test2.y.<get-y>();kotlin.String
+            VALUE_PARAMETER name:<this> type:Test2 flags:
+            VPARAM:Test2.y.<get-y>()#<this>;Test2
+
+
+
+    CLASS CLASS name:TestInner modality:FINAL visibility:public flags:inner superTypes:[kotlin.Any]
+    CLASS:Test2$TestInner<Z>
+        TYPE_PARAMETER name:Z index:0 variance: superTypes:[kotlin.Any?]
+        TPARAM:Test2$TestInner<Z>~Z
+
+        CONSTRUCTOR visibility:public <> ($this:Test2, z:Z) returnType:Test2.TestInner<Z> flags:primary
+        CTOR:Test2$TestInner<Z>.TestInner(Test2$TestInner<Z>~Z);Test2$TestInner<Z>
+            VALUE_PARAMETER name:<this> type:Test2 flags:
+            VPARAM:Test2$TestInner<Z>.TestInner(Test2$TestInner<Z>~Z)#<this>;Test2
+
+            VALUE_PARAMETER name:z index:0 type:Z flags:
+            VPARAM:Test2$TestInner<Z>.TestInner(Test2$TestInner<Z>~Z)#z;Test2$TestInner<Z>~Z
+
+
+        PROPERTY name:z visibility:public modality:FINAL flags:val
+        PROP:Test2$TestInner<Z>.z;Test2$TestInner<Z>~Z
+            FIELD PROPERTY_BACKING_FIELD name:z type:Z visibility:public flags:final
+            BFIELD:Test2$TestInner<Z>.z#field
+
+            FUN DEFAULT_PROPERTY_ACCESSOR name:<get-z> visibility:public modality:FINAL <> ($this:Test2.TestInner<Z>) returnType:Z flags:
+            FUN:Test2$TestInner<Z>.z.<get-z>();Test2$TestInner<Z>~Z
+                VALUE_PARAMETER name:<this> type:Test2.TestInner<Z> flags:
+                VPARAM:Test2$TestInner<Z>.z.<get-z>()#<this>;Test2$TestInner<Z>
+
+
+
+        CONSTRUCTOR visibility:public <> ($this:Test2, z:Z, i:kotlin.Int) returnType:Test2.TestInner<Z> flags:
+        CTOR:Test2$TestInner<Z>.TestInner(Test2$TestInner<Z>~Z, kotlin.Int);Test2$TestInner<Z>
+            VALUE_PARAMETER name:<this> type:Test2 flags:
+            VPARAM:Test2$TestInner<Z>.TestInner(Test2$TestInner<Z>~Z, kotlin.Int)#<this>;Test2
+
+            VALUE_PARAMETER name:z index:0 type:Z flags:
+            VPARAM:Test2$TestInner<Z>.TestInner(Test2$TestInner<Z>~Z, kotlin.Int)#z;Test2$TestInner<Z>~Z
+
+            VALUE_PARAMETER name:i index:1 type:kotlin.Int flags:
+            VPARAM:Test2$TestInner<Z>.TestInner(Test2$TestInner<Z>~Z, kotlin.Int)#i;kotlin.Int
+
+
+
+
+CLASS CLASS name:Test3 modality:FINAL visibility:public flags: superTypes:[kotlin.Any]
+CLASS:Test3
+    CONSTRUCTOR visibility:public <> (x:kotlin.Int, y:kotlin.String) returnType:Test3 flags:primary
+    CTOR:Test3.Test3(kotlin.Int, kotlin.String);Test3
+        VALUE_PARAMETER name:x index:0 type:kotlin.Int flags:
+        VPARAM:Test3.Test3(kotlin.Int, kotlin.String)#x;kotlin.Int
+
+        VALUE_PARAMETER name:y index:1 type:kotlin.String flags:
+        VPARAM:Test3.Test3(kotlin.Int, kotlin.String)#y;kotlin.String
+
+
+    PROPERTY name:x visibility:public modality:FINAL flags:val
+    PROP:Test3.x;kotlin.Int
+        FIELD PROPERTY_BACKING_FIELD name:x type:kotlin.Int visibility:public flags:final
+        BFIELD:Test3.x#field
+
+        FUN DEFAULT_PROPERTY_ACCESSOR name:<get-x> visibility:public modality:FINAL <> ($this:Test3) returnType:kotlin.Int flags:
+        FUN:Test3.x.<get-x>();kotlin.Int
+            VALUE_PARAMETER name:<this> type:Test3 flags:
+            VPARAM:Test3.x.<get-x>()#<this>;Test3
+
+
+
+    PROPERTY name:y visibility:public modality:FINAL flags:val
+    PROP:Test3.y;kotlin.String
+        FIELD PROPERTY_BACKING_FIELD name:y type:kotlin.String visibility:public flags:final
+        BFIELD:Test3.y#field
+
+        FUN DEFAULT_PROPERTY_ACCESSOR name:<get-y> visibility:public modality:FINAL <> ($this:Test3) returnType:kotlin.String flags:
+        FUN:Test3.y.<get-y>();kotlin.String
+            VALUE_PARAMETER name:<this> type:Test3 flags:
+            VPARAM:Test3.y.<get-y>()#<this>;Test3
+
+
+
+
+CLASS CLASS name:Test4 modality:FINAL visibility:public flags: superTypes:[kotlin.Any]
+CLASS:Test4<T>
+    TYPE_PARAMETER name:T index:0 variance: superTypes:[kotlin.Any?]
+    TPARAM:Test4<T>~T
+
+    CONSTRUCTOR visibility:public <> (x:kotlin.Int) returnType:Test4<T> flags:primary
+    CTOR:Test4<T>.Test4(kotlin.Int);Test4<T>
+        VALUE_PARAMETER name:x index:0 type:kotlin.Int flags:
+        VPARAM:Test4<T>.Test4(kotlin.Int)#x;kotlin.Int
+
+
+    PROPERTY name:x visibility:public modality:FINAL flags:val
+    PROP:Test4<T>.x;kotlin.Int
+        FIELD PROPERTY_BACKING_FIELD name:x type:kotlin.Int visibility:public flags:final
+        BFIELD:Test4<T>.x#field
+
+        FUN DEFAULT_PROPERTY_ACCESSOR name:<get-x> visibility:public modality:FINAL <> ($this:Test4<T>) returnType:kotlin.Int flags:
+        FUN:Test4<T>.x.<get-x>();kotlin.Int
+            VALUE_PARAMETER name:<this> type:Test4<T> flags:
+            VPARAM:Test4<T>.x.<get-x>()#<this>;Test4<T>
+
+
+
+    CONSTRUCTOR visibility:public <> (x:kotlin.Int, y:kotlin.Int) returnType:Test4<T> flags:
+    CTOR:Test4<T>.Test4(kotlin.Int, kotlin.Int);Test4<T>
+        VALUE_PARAMETER name:x index:0 type:kotlin.Int flags:
+        VPARAM:Test4<T>.Test4(kotlin.Int, kotlin.Int)#x;kotlin.Int
+
+        VALUE_PARAMETER name:y index:1 type:kotlin.Int flags:
+        VPARAM:Test4<T>.Test4(kotlin.Int, kotlin.Int)#y;kotlin.Int
+
+
+

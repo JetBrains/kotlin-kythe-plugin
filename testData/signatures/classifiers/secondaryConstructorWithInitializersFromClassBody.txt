@@ -1,0 +1,56 @@
+CLASS CLASS name:Base modality:OPEN visibility:public flags: superTypes:[kotlin.Any]
+CLASS:Base
+    CONSTRUCTOR visibility:public <> () returnType:Base flags:primary
+    CTOR:Base.Base();Base
+
+
+CLASS CLASS name:TestProperty modality:FINAL visibility:public flags: superTypes:[Base]
+CLASS:TestProperty
+    PROPERTY name:x visibility:public modality:FINAL flags:val
+    PROP:TestProperty.x;kotlin.Int
+        FIELD PROPERTY_BACKING_FIELD name:x type:kotlin.Int visibility:public flags:final
+        BFIELD:TestProperty.x#field
+
+        FUN DEFAULT_PROPERTY_ACCESSOR name:<get-x> visibility:public modality:FINAL <> ($this:TestProperty) returnType:kotlin.Int flags:
+        FUN:TestProperty.x.<get-x>();kotlin.Int
+            VALUE_PARAMETER name:<this> type:TestProperty flags:
+            VPARAM:TestProperty.x.<get-x>()#<this>;TestProperty
+
+
+
+    CONSTRUCTOR visibility:public <> () returnType:TestProperty flags:
+    CTOR:TestProperty.TestProperty();TestProperty
+
+
+CLASS CLASS name:TestInitBlock modality:FINAL visibility:public flags: superTypes:[Base]
+CLASS:TestInitBlock
+    PROPERTY name:x visibility:public modality:FINAL flags:val
+    PROP:TestInitBlock.x;kotlin.Int
+        FIELD PROPERTY_BACKING_FIELD name:x type:kotlin.Int visibility:public flags:final
+        BFIELD:TestInitBlock.x#field
+
+        FUN DEFAULT_PROPERTY_ACCESSOR name:<get-x> visibility:public modality:FINAL <> ($this:TestInitBlock) returnType:kotlin.Int flags:
+        FUN:TestInitBlock.x.<get-x>();kotlin.Int
+            VALUE_PARAMETER name:<this> type:TestInitBlock flags:
+            VPARAM:TestInitBlock.x.<get-x>()#<this>;TestInitBlock
+
+
+
+    ANONYMOUS_INITIALIZER TestInitBlock
+
+    CONSTRUCTOR visibility:public <> () returnType:TestInitBlock flags:
+    CTOR:TestInitBlock.TestInitBlock();TestInitBlock
+
+    CONSTRUCTOR visibility:public <> (z:kotlin.Any) returnType:TestInitBlock flags:
+    CTOR:TestInitBlock.TestInitBlock(kotlin.Any);TestInitBlock
+        VALUE_PARAMETER name:z index:0 type:kotlin.Any flags:
+        VPARAM:TestInitBlock.TestInitBlock(kotlin.Any)#z;kotlin.Any
+
+
+    CONSTRUCTOR visibility:public <> (y:kotlin.Int) returnType:TestInitBlock flags:
+    CTOR:TestInitBlock.TestInitBlock(kotlin.Int);TestInitBlock
+        VALUE_PARAMETER name:y index:0 type:kotlin.Int flags:
+        VPARAM:TestInitBlock.TestInitBlock(kotlin.Int)#y;kotlin.Int
+
+
+

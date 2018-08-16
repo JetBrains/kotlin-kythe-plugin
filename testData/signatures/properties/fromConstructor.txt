@@ -1,0 +1,69 @@
+CLASS CLASS name:Foo modality:FINAL visibility:public flags: superTypes:[kotlin.Any]
+CLASS:Foo
+    VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:Foo flags:
+    VPARAM:Foo#<this>;Foo
+
+    CONSTRUCTOR visibility:public <> (valFromCtor:kotlin.Int, varFromCtor:kotlin.Int) returnType:Foo flags:primary
+    CTOR:Foo.Foo(kotlin.Int, kotlin.Int);Foo
+        VALUE_PARAMETER name:valFromCtor index:0 type:kotlin.Int flags:
+        VPARAM:Foo.Foo(kotlin.Int, kotlin.Int)#valFromCtor;kotlin.Int
+
+        VALUE_PARAMETER name:varFromCtor index:1 type:kotlin.Int flags:
+        VPARAM:Foo.Foo(kotlin.Int, kotlin.Int)#varFromCtor;kotlin.Int
+
+
+    PROPERTY name:valFromCtor visibility:public modality:FINAL flags:val
+    PROP:Foo.valFromCtor;kotlin.Int
+        FIELD PROPERTY_BACKING_FIELD name:valFromCtor type:kotlin.Int visibility:public flags:final
+        BFIELD:Foo.valFromCtor#field
+
+        FUN DEFAULT_PROPERTY_ACCESSOR name:<get-valFromCtor> visibility:public modality:FINAL <> ($this:Foo) returnType:kotlin.Int flags:
+        FUN:Foo.valFromCtor.<get-valFromCtor>();kotlin.Int
+            VALUE_PARAMETER name:<this> type:Foo flags:
+            VPARAM:Foo.valFromCtor.<get-valFromCtor>()#<this>;Foo
+
+
+
+    PROPERTY name:varFromCtor visibility:public modality:FINAL flags:var
+    PROP:Foo.varFromCtor;kotlin.Int
+        FIELD PROPERTY_BACKING_FIELD name:varFromCtor type:kotlin.Int visibility:public flags:
+        BFIELD:Foo.varFromCtor#field
+
+        FUN DEFAULT_PROPERTY_ACCESSOR name:<get-varFromCtor> visibility:public modality:FINAL <> ($this:Foo) returnType:kotlin.Int flags:
+        FUN:Foo.varFromCtor.<get-varFromCtor>();kotlin.Int
+            VALUE_PARAMETER name:<this> type:Foo flags:
+            VPARAM:Foo.varFromCtor.<get-varFromCtor>()#<this>;Foo
+
+
+        FUN DEFAULT_PROPERTY_ACCESSOR name:<set-varFromCtor> visibility:public modality:FINAL <> ($this:Foo, <set-?>:kotlin.Int) returnType:kotlin.Unit flags:
+        FUN:Foo.varFromCtor.<set-varFromCtor>(kotlin.Int);kotlin.Unit
+            VALUE_PARAMETER name:<this> type:Foo flags:
+            VPARAM:Foo.varFromCtor.<set-varFromCtor>(kotlin.Int)#<this>;Foo
+
+            VALUE_PARAMETER name:<set-?> index:0 type:kotlin.Int flags:
+            VPARAM:Foo.varFromCtor.<set-varFromCtor>(kotlin.Int)#<set-?>;kotlin.Int
+
+
+
+    FUN FAKE_OVERRIDE name:equals visibility:public modality:OPEN <> ($this:kotlin.Any, other:kotlin.Any?) returnType:kotlin.Boolean flags:
+    FUN:Foo.equals(kotlin.Any?);kotlin.Boolean
+        VALUE_PARAMETER name:<this> type:kotlin.Any flags:
+        VPARAM:Foo.equals(kotlin.Any?)#<this>;kotlin.Any
+
+        VALUE_PARAMETER name:other index:0 type:kotlin.Any? flags:
+        VPARAM:Foo.equals(kotlin.Any?)#other;kotlin.Any?
+
+
+    FUN FAKE_OVERRIDE name:hashCode visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.Int flags:
+    FUN:Foo.hashCode();kotlin.Int
+        VALUE_PARAMETER name:<this> type:kotlin.Any flags:
+        VPARAM:Foo.hashCode()#<this>;kotlin.Any
+
+
+    FUN FAKE_OVERRIDE name:toString visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.String flags:
+    FUN:Foo.toString();kotlin.String
+        VALUE_PARAMETER name:<this> type:kotlin.Any flags:
+        VPARAM:Foo.toString()#<this>;kotlin.Any
+
+
+

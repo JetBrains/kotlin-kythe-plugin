@@ -1,0 +1,150 @@
+CLASS CLASS name:MyInt modality:FINAL visibility:public flags: superTypes:[kotlin.Any]
+CLASS:foo.bar.baz.MyInt
+    VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:foo.bar.baz.MyInt flags:
+    VPARAM:foo.bar.baz.MyInt#<this>;foo.bar.baz.MyInt
+
+    CONSTRUCTOR visibility:public <> () returnType:foo.bar.baz.MyInt flags:primary
+    CTOR:foo.bar.baz.MyInt.MyInt();foo.bar.baz.MyInt
+
+    FUN FAKE_OVERRIDE name:equals visibility:public modality:OPEN <> ($this:kotlin.Any, other:kotlin.Any?) returnType:kotlin.Boolean flags:
+    FUN:foo.bar.baz.MyInt.equals(kotlin.Any?);kotlin.Boolean
+        VALUE_PARAMETER name:<this> type:kotlin.Any flags:
+        VPARAM:foo.bar.baz.MyInt.equals(kotlin.Any?)#<this>;kotlin.Any
+
+        VALUE_PARAMETER name:other index:0 type:kotlin.Any? flags:
+        VPARAM:foo.bar.baz.MyInt.equals(kotlin.Any?)#other;kotlin.Any?
+
+
+    FUN FAKE_OVERRIDE name:hashCode visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.Int flags:
+    FUN:foo.bar.baz.MyInt.hashCode();kotlin.Int
+        VALUE_PARAMETER name:<this> type:kotlin.Any flags:
+        VPARAM:foo.bar.baz.MyInt.hashCode()#<this>;kotlin.Any
+
+
+    FUN FAKE_OVERRIDE name:toString visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.String flags:
+    FUN:foo.bar.baz.MyInt.toString();kotlin.String
+        VALUE_PARAMETER name:<this> type:kotlin.Any flags:
+        VPARAM:foo.bar.baz.MyInt.toString()#<this>;kotlin.Any
+
+
+
+CLASS CLASS name:Bar modality:FINAL visibility:public flags: superTypes:[kotlin.Any]
+CLASS:foo.bar.baz.Bar
+    VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:foo.bar.baz.Bar flags:
+    VPARAM:foo.bar.baz.Bar#<this>;foo.bar.baz.Bar
+
+    CONSTRUCTOR visibility:public <> () returnType:foo.bar.baz.Bar flags:primary
+    CTOR:foo.bar.baz.Bar.Bar();foo.bar.baz.Bar
+
+    PROPERTY name:justvar visibility:private modality:FINAL flags:var
+    PROP:foo.bar.baz.Bar.justvar;foo.bar.baz.MyInt?
+        FIELD PROPERTY_BACKING_FIELD name:justvar type:foo.bar.baz.MyInt? visibility:private flags:
+        BFIELD:foo.bar.baz.Bar.justvar#field
+
+        FUN DEFAULT_PROPERTY_ACCESSOR name:<get-justvar> visibility:private modality:FINAL <> ($this:foo.bar.baz.Bar) returnType:foo.bar.baz.MyInt? flags:
+        FUN:foo.bar.baz.Bar.justvar.<get-justvar>();foo.bar.baz.MyInt?
+            VALUE_PARAMETER name:<this> type:foo.bar.baz.Bar flags:
+            VPARAM:foo.bar.baz.Bar.justvar.<get-justvar>()#<this>;foo.bar.baz.Bar
+
+
+        FUN DEFAULT_PROPERTY_ACCESSOR name:<set-justvar> visibility:private modality:FINAL <> ($this:foo.bar.baz.Bar, <set-?>:foo.bar.baz.MyInt?) returnType:kotlin.Unit flags:
+        FUN:foo.bar.baz.Bar.justvar.<set-justvar>(foo.bar.baz.MyInt?);kotlin.Unit
+            VALUE_PARAMETER name:<this> type:foo.bar.baz.Bar flags:
+            VPARAM:foo.bar.baz.Bar.justvar.<set-justvar>(foo.bar.baz.MyInt?)#<this>;foo.bar.baz.Bar
+
+            VALUE_PARAMETER name:<set-?> index:0 type:foo.bar.baz.MyInt? flags:
+            VPARAM:foo.bar.baz.Bar.justvar.<set-justvar>(foo.bar.baz.MyInt?)#<set-?>;foo.bar.baz.MyInt?
+
+
+
+    PROPERTY name:varWithGetter visibility:private modality:FINAL flags:var
+    PROP:foo.bar.baz.Bar.varWithGetter;foo.bar.baz.MyInt?
+        FIELD PROPERTY_BACKING_FIELD name:varWithGetter type:foo.bar.baz.MyInt? visibility:private flags:
+        BFIELD:foo.bar.baz.Bar.varWithGetter#field
+
+        FUN name:<get-varWithGetter> visibility:private modality:FINAL <> ($this:foo.bar.baz.Bar) returnType:foo.bar.baz.MyInt? flags:
+        FUN:foo.bar.baz.Bar.varWithGetter.<get-varWithGetter>();foo.bar.baz.MyInt?
+            VALUE_PARAMETER name:<this> type:foo.bar.baz.Bar flags:
+            VPARAM:foo.bar.baz.Bar.varWithGetter.<get-varWithGetter>()#<this>;foo.bar.baz.Bar
+
+
+        FUN DEFAULT_PROPERTY_ACCESSOR name:<set-varWithGetter> visibility:private modality:FINAL <> ($this:foo.bar.baz.Bar, <set-?>:foo.bar.baz.MyInt?) returnType:kotlin.Unit flags:
+        FUN:foo.bar.baz.Bar.varWithGetter.<set-varWithGetter>(foo.bar.baz.MyInt?);kotlin.Unit
+            VALUE_PARAMETER name:<this> type:foo.bar.baz.Bar flags:
+            VPARAM:foo.bar.baz.Bar.varWithGetter.<set-varWithGetter>(foo.bar.baz.MyInt?)#<this>;foo.bar.baz.Bar
+
+            VALUE_PARAMETER name:<set-?> index:0 type:foo.bar.baz.MyInt? flags:
+            VPARAM:foo.bar.baz.Bar.varWithGetter.<set-varWithGetter>(foo.bar.baz.MyInt?)#<set-?>;foo.bar.baz.MyInt?
+
+
+
+    PROPERTY name:varWithSetter visibility:private modality:FINAL flags:var
+    PROP:foo.bar.baz.Bar.varWithSetter;foo.bar.baz.MyInt?
+        FIELD PROPERTY_BACKING_FIELD name:varWithSetter type:foo.bar.baz.MyInt? visibility:private flags:
+        BFIELD:foo.bar.baz.Bar.varWithSetter#field
+
+        FUN DEFAULT_PROPERTY_ACCESSOR name:<get-varWithSetter> visibility:private modality:FINAL <> ($this:foo.bar.baz.Bar) returnType:foo.bar.baz.MyInt? flags:
+        FUN:foo.bar.baz.Bar.varWithSetter.<get-varWithSetter>();foo.bar.baz.MyInt?
+            VALUE_PARAMETER name:<this> type:foo.bar.baz.Bar flags:
+            VPARAM:foo.bar.baz.Bar.varWithSetter.<get-varWithSetter>()#<this>;foo.bar.baz.Bar
+
+
+        FUN name:<set-varWithSetter> visibility:private modality:FINAL <> ($this:foo.bar.baz.Bar, x:foo.bar.baz.MyInt?) returnType:kotlin.Unit flags:
+        FUN:foo.bar.baz.Bar.varWithSetter.<set-varWithSetter>(foo.bar.baz.MyInt?);kotlin.Unit
+            VALUE_PARAMETER name:<this> type:foo.bar.baz.Bar flags:
+            VPARAM:foo.bar.baz.Bar.varWithSetter.<set-varWithSetter>(foo.bar.baz.MyInt?)#<this>;foo.bar.baz.Bar
+
+            VALUE_PARAMETER name:x index:0 type:foo.bar.baz.MyInt? flags:
+            VPARAM:foo.bar.baz.Bar.varWithSetter.<set-varWithSetter>(foo.bar.baz.MyInt?)#x;foo.bar.baz.MyInt?
+
+
+
+    PROPERTY name:varWithSetterAndGetter visibility:private modality:FINAL flags:var
+    PROP:foo.bar.baz.Bar.varWithSetterAndGetter;foo.bar.baz.MyInt?
+        FUN name:<get-varWithSetterAndGetter> visibility:private modality:FINAL <> ($this:foo.bar.baz.Bar) returnType:foo.bar.baz.MyInt? flags:
+        FUN:foo.bar.baz.Bar.varWithSetterAndGetter.<get-varWithSetterAndGetter>();foo.bar.baz.MyInt?
+            VALUE_PARAMETER name:<this> type:foo.bar.baz.Bar flags:
+            VPARAM:foo.bar.baz.Bar.varWithSetterAndGetter.<get-varWithSetterAndGetter>()#<this>;foo.bar.baz.Bar
+
+
+        FUN name:<set-varWithSetterAndGetter> visibility:private modality:FINAL <> ($this:foo.bar.baz.Bar, x:foo.bar.baz.MyInt?) returnType:kotlin.Unit flags:
+        FUN:foo.bar.baz.Bar.varWithSetterAndGetter.<set-varWithSetterAndGetter>(foo.bar.baz.MyInt?);kotlin.Unit
+            VALUE_PARAMETER name:<this> type:foo.bar.baz.Bar flags:
+            VPARAM:foo.bar.baz.Bar.varWithSetterAndGetter.<set-varWithSetterAndGetter>(foo.bar.baz.MyInt?)#<this>;foo.bar.baz.Bar
+
+            VALUE_PARAMETER name:x index:0 type:foo.bar.baz.MyInt? flags:
+            VPARAM:foo.bar.baz.Bar.varWithSetterAndGetter.<set-varWithSetterAndGetter>(foo.bar.baz.MyInt?)#x;foo.bar.baz.MyInt?
+
+
+
+    FUN name:test visibility:public modality:FINAL <> ($this:foo.bar.baz.Bar) returnType:kotlin.Unit flags:
+    FUN:foo.bar.baz.Bar.test();kotlin.Unit
+        VALUE_PARAMETER name:<this> type:foo.bar.baz.Bar flags:
+        VPARAM:foo.bar.baz.Bar.test()#<this>;foo.bar.baz.Bar
+
+        VAR name:local type:foo.bar.baz.MyInt? flags:var
+        VAR:foo.bar.baz.Bar.test().local
+
+
+    FUN FAKE_OVERRIDE name:equals visibility:public modality:OPEN <> ($this:kotlin.Any, other:kotlin.Any?) returnType:kotlin.Boolean flags:
+    FUN:foo.bar.baz.Bar.equals(kotlin.Any?);kotlin.Boolean
+        VALUE_PARAMETER name:<this> type:kotlin.Any flags:
+        VPARAM:foo.bar.baz.Bar.equals(kotlin.Any?)#<this>;kotlin.Any
+
+        VALUE_PARAMETER name:other index:0 type:kotlin.Any? flags:
+        VPARAM:foo.bar.baz.Bar.equals(kotlin.Any?)#other;kotlin.Any?
+
+
+    FUN FAKE_OVERRIDE name:hashCode visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.Int flags:
+    FUN:foo.bar.baz.Bar.hashCode();kotlin.Int
+        VALUE_PARAMETER name:<this> type:kotlin.Any flags:
+        VPARAM:foo.bar.baz.Bar.hashCode()#<this>;kotlin.Any
+
+
+    FUN FAKE_OVERRIDE name:toString visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.String flags:
+    FUN:foo.bar.baz.Bar.toString();kotlin.String
+        VALUE_PARAMETER name:<this> type:kotlin.Any flags:
+        VPARAM:foo.bar.baz.Bar.toString()#<this>;kotlin.Any
+
+
+

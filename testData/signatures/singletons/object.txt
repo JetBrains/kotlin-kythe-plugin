@@ -1,0 +1,72 @@
+CLASS OBJECT name:Z modality:FINAL visibility:public flags: superTypes:[kotlin.Any]
+OBJ:Z
+    VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:Z flags:
+    VPARAM:Z#<this>;Z
+
+    CONSTRUCTOR visibility:private <> () returnType:Z flags:primary
+    CTOR:Z.Z();Z
+
+    FUN name:test visibility:public modality:FINAL <> ($this:Z) returnType:kotlin.Unit flags:
+    FUN:Z.test();kotlin.Unit
+        VALUE_PARAMETER name:<this> type:Z flags:
+        VPARAM:Z.test()#<this>;Z
+
+
+    CLASS CLASS name:A modality:FINAL visibility:public flags: superTypes:[kotlin.Any]
+    CLASS:Z.A
+        VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:Z.A flags:
+        VPARAM:Z.A#<this>;Z.A
+
+        CONSTRUCTOR visibility:public <> () returnType:Z.A flags:primary
+        CTOR:Z.A.A();Z.A
+
+        FUN name:test2 visibility:public modality:FINAL <> ($this:Z.A) returnType:kotlin.Unit flags:
+        FUN:Z.A.test2();kotlin.Unit
+            VALUE_PARAMETER name:<this> type:Z.A flags:
+            VPARAM:Z.A.test2()#<this>;Z.A
+
+
+        FUN FAKE_OVERRIDE name:equals visibility:public modality:OPEN <> ($this:kotlin.Any, other:kotlin.Any?) returnType:kotlin.Boolean flags:
+        FUN:Z.A.equals(kotlin.Any?);kotlin.Boolean
+            VALUE_PARAMETER name:<this> type:kotlin.Any flags:
+            VPARAM:Z.A.equals(kotlin.Any?)#<this>;kotlin.Any
+
+            VALUE_PARAMETER name:other index:0 type:kotlin.Any? flags:
+            VPARAM:Z.A.equals(kotlin.Any?)#other;kotlin.Any?
+
+
+        FUN FAKE_OVERRIDE name:hashCode visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.Int flags:
+        FUN:Z.A.hashCode();kotlin.Int
+            VALUE_PARAMETER name:<this> type:kotlin.Any flags:
+            VPARAM:Z.A.hashCode()#<this>;kotlin.Any
+
+
+        FUN FAKE_OVERRIDE name:toString visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.String flags:
+        FUN:Z.A.toString();kotlin.String
+            VALUE_PARAMETER name:<this> type:kotlin.Any flags:
+            VPARAM:Z.A.toString()#<this>;kotlin.Any
+
+
+
+    FUN FAKE_OVERRIDE name:equals visibility:public modality:OPEN <> ($this:kotlin.Any, other:kotlin.Any?) returnType:kotlin.Boolean flags:
+    FUN:Z.equals(kotlin.Any?);kotlin.Boolean
+        VALUE_PARAMETER name:<this> type:kotlin.Any flags:
+        VPARAM:Z.equals(kotlin.Any?)#<this>;kotlin.Any
+
+        VALUE_PARAMETER name:other index:0 type:kotlin.Any? flags:
+        VPARAM:Z.equals(kotlin.Any?)#other;kotlin.Any?
+
+
+    FUN FAKE_OVERRIDE name:hashCode visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.Int flags:
+    FUN:Z.hashCode();kotlin.Int
+        VALUE_PARAMETER name:<this> type:kotlin.Any flags:
+        VPARAM:Z.hashCode()#<this>;kotlin.Any
+
+
+    FUN FAKE_OVERRIDE name:toString visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.String flags:
+    FUN:Z.toString();kotlin.String
+        VALUE_PARAMETER name:<this> type:kotlin.Any flags:
+        VPARAM:Z.toString()#<this>;kotlin.Any
+
+
+

@@ -1,0 +1,33 @@
+CLASS CLASS name:Outer modality:FINAL visibility:public flags: superTypes:[kotlin.Any]
+CLASS:Outer<T1>
+    TYPE_PARAMETER name:T1 index:0 variance: superTypes:[kotlin.Any?]
+    TPARAM:Outer<T1>~T1
+
+    CONSTRUCTOR visibility:public <> () returnType:Outer<T1> flags:primary
+    CTOR:Outer<T1>.Outer();Outer<T1>
+
+    CLASS CLASS name:Inner modality:FINAL visibility:public flags:inner superTypes:[kotlin.Any]
+    CLASS:Outer<T1>$Inner<T2>
+        TYPE_PARAMETER name:T2 index:0 variance: superTypes:[kotlin.Any?]
+        TPARAM:Outer<T1>$Inner<T2>~T2
+
+        CONSTRUCTOR visibility:public <> ($this:Outer<T1>) returnType:Outer<T1>.Inner<T2> flags:primary
+        CTOR:Outer<T1>$Inner<T2>.Inner();Outer<T1>$Inner<T2,Outer<T1>~T1>
+            VALUE_PARAMETER name:<this> type:Outer<T1> flags:
+            VPARAM:Outer<T1>$Inner<T2>.Inner()#<this>;Outer<T1>
+
+
+        FUN name:foo visibility:public modality:FINAL <> ($this:Outer<T1>.Inner<T2>, x1:T1, x2:T2) returnType:kotlin.Unit flags:
+        FUN:Outer<T1>$Inner<T2>.foo(Outer<T1>~T1, Outer<T1>$Inner<T2>~T2);kotlin.Unit
+            VALUE_PARAMETER name:<this> type:Outer<T1>.Inner<T2> flags:
+            VPARAM:Outer<T1>$Inner<T2>.foo(Outer<T1>~T1, Outer<T1>$Inner<T2>~T2)#<this>;Outer<T1>$Inner<T2,Outer<T1>~T1>
+
+            VALUE_PARAMETER name:x1 index:0 type:T1 flags:
+            VPARAM:Outer<T1>$Inner<T2>.foo(Outer<T1>~T1, Outer<T1>$Inner<T2>~T2)#x1;Outer<T1>~T1
+
+            VALUE_PARAMETER name:x2 index:1 type:T2 flags:
+            VPARAM:Outer<T1>$Inner<T2>.foo(Outer<T1>~T1, Outer<T1>$Inner<T2>~T2)#x2;Outer<T1>$Inner<T2>~T2
+
+
+
+

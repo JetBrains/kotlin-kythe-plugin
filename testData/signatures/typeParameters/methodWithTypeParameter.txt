@@ -1,0 +1,9 @@
+FUN name:foo visibility:public modality:FINAL <T> (x:T) returnType:T flags:
+FUN:<T>foo(T);T
+    TYPE_PARAMETER name:T index:0 variance: superTypes:[kotlin.Any?]
+    TPARAM:<T>foo(T)~T
+
+    VALUE_PARAMETER name:x index:0 type:T flags:
+    VPARAM:<T>foo(T)#x;<T>foo(T)~T
+
+

@@ -1,0 +1,69 @@
+CLASS CLASS name:Expr modality:SEALED visibility:public flags: superTypes:[kotlin.Any]
+CLASS:Expr
+    CONSTRUCTOR visibility:private <> () returnType:Expr flags:primary
+    CTOR:Expr.Expr();Expr
+
+    CLASS CLASS name:Const modality:FINAL visibility:public flags: superTypes:[Expr]
+    CLASS:Expr.Const
+        CONSTRUCTOR visibility:public <> (number:kotlin.Double) returnType:Expr.Const flags:primary
+        CTOR:Expr.Const.Const(kotlin.Double);Expr.Const
+            VALUE_PARAMETER name:number index:0 type:kotlin.Double flags:
+            VPARAM:Expr.Const.Const(kotlin.Double)#number;kotlin.Double
+
+
+        PROPERTY name:number visibility:public modality:FINAL flags:val
+        PROP:Expr.Const.number;kotlin.Double
+            FIELD PROPERTY_BACKING_FIELD name:number type:kotlin.Double visibility:public flags:final
+            BFIELD:Expr.Const.number#field
+
+            FUN DEFAULT_PROPERTY_ACCESSOR name:<get-number> visibility:public modality:FINAL <> ($this:Expr.Const) returnType:kotlin.Double flags:
+            FUN:Expr.Const.number.<get-number>();kotlin.Double
+                VALUE_PARAMETER name:<this> type:Expr.Const flags:
+                VPARAM:Expr.Const.number.<get-number>()#<this>;Expr.Const
+
+
+
+
+    CLASS CLASS name:Sum modality:FINAL visibility:public flags: superTypes:[Expr]
+    CLASS:Expr.Sum
+        CONSTRUCTOR visibility:public <> (e1:Expr, e2:Expr) returnType:Expr.Sum flags:primary
+        CTOR:Expr.Sum.Sum(Expr, Expr);Expr.Sum
+            VALUE_PARAMETER name:e1 index:0 type:Expr flags:
+            VPARAM:Expr.Sum.Sum(Expr, Expr)#e1;Expr
+
+            VALUE_PARAMETER name:e2 index:1 type:Expr flags:
+            VPARAM:Expr.Sum.Sum(Expr, Expr)#e2;Expr
+
+
+        PROPERTY name:e1 visibility:public modality:FINAL flags:val
+        PROP:Expr.Sum.e1;Expr
+            FIELD PROPERTY_BACKING_FIELD name:e1 type:Expr visibility:public flags:final
+            BFIELD:Expr.Sum.e1#field
+
+            FUN DEFAULT_PROPERTY_ACCESSOR name:<get-e1> visibility:public modality:FINAL <> ($this:Expr.Sum) returnType:Expr flags:
+            FUN:Expr.Sum.e1.<get-e1>();Expr
+                VALUE_PARAMETER name:<this> type:Expr.Sum flags:
+                VPARAM:Expr.Sum.e1.<get-e1>()#<this>;Expr.Sum
+
+
+
+        PROPERTY name:e2 visibility:public modality:FINAL flags:val
+        PROP:Expr.Sum.e2;Expr
+            FIELD PROPERTY_BACKING_FIELD name:e2 type:Expr visibility:public flags:final
+            BFIELD:Expr.Sum.e2#field
+
+            FUN DEFAULT_PROPERTY_ACCESSOR name:<get-e2> visibility:public modality:FINAL <> ($this:Expr.Sum) returnType:Expr flags:
+            FUN:Expr.Sum.e2.<get-e2>();Expr
+                VALUE_PARAMETER name:<this> type:Expr.Sum flags:
+                VPARAM:Expr.Sum.e2.<get-e2>()#<this>;Expr.Sum
+
+
+
+
+    CLASS OBJECT name:NotANumber modality:FINAL visibility:public flags: superTypes:[Expr]
+    OBJ:Expr.NotANumber
+        CONSTRUCTOR visibility:private <> () returnType:Expr.NotANumber flags:primary
+        CTOR:Expr.NotANumber.NotANumber();Expr.NotANumber
+
+
+

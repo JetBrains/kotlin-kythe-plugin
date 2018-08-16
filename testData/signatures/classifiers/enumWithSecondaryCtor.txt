@@ -1,0 +1,144 @@
+CLASS ENUM_CLASS name:Test0 modality:FINAL visibility:public flags: superTypes:[kotlin.Enum<Test0>]
+ENUM:Test0
+    CONSTRUCTOR visibility:private <> (x:kotlin.Int) returnType:Test0 flags:primary
+    CTOR:Test0.Test0(kotlin.Int);Test0
+        VALUE_PARAMETER name:x index:0 type:kotlin.Int flags:
+        VPARAM:Test0.Test0(kotlin.Int)#x;kotlin.Int
+
+
+    PROPERTY name:x visibility:public modality:FINAL flags:val
+    PROP:Test0.x;kotlin.Int
+        FIELD PROPERTY_BACKING_FIELD name:x type:kotlin.Int visibility:public flags:final
+        BFIELD:Test0.x#field
+
+        FUN DEFAULT_PROPERTY_ACCESSOR name:<get-x> visibility:public modality:FINAL <> ($this:Test0) returnType:kotlin.Int flags:
+        FUN:Test0.x.<get-x>();kotlin.Int
+            VALUE_PARAMETER name:<this> type:Test0 flags:
+            VPARAM:Test0.x.<get-x>()#<this>;Test0
+
+
+
+    ENUM_ENTRY name:ZERO
+    ENUM_ENTRY:Test0.ZERO
+
+    CONSTRUCTOR visibility:private <> () returnType:Test0 flags:
+    CTOR:Test0.Test0();Test0
+
+    FUN ENUM_CLASS_SPECIAL_MEMBER name:values visibility:public modality:FINAL <> () returnType:kotlin.Array<Test0> flags:
+    FUN:Test0.values();kotlin.Array<Test0>
+
+    FUN ENUM_CLASS_SPECIAL_MEMBER name:valueOf visibility:public modality:FINAL <> (value:kotlin.String) returnType:Test0 flags:
+    FUN:Test0.valueOf(kotlin.String);Test0
+        VALUE_PARAMETER name:value index:0 type:kotlin.String flags:
+        VPARAM:Test0.valueOf(kotlin.String)#value;kotlin.String
+
+
+
+CLASS ENUM_CLASS name:Test1 modality:FINAL visibility:public flags: superTypes:[kotlin.Enum<Test1>]
+ENUM:Test1
+    CONSTRUCTOR visibility:private <> (x:kotlin.Int) returnType:Test1 flags:primary
+    CTOR:Test1.Test1(kotlin.Int);Test1
+        VALUE_PARAMETER name:x index:0 type:kotlin.Int flags:
+        VPARAM:Test1.Test1(kotlin.Int)#x;kotlin.Int
+
+
+    PROPERTY name:x visibility:public modality:FINAL flags:val
+    PROP:Test1.x;kotlin.Int
+        FIELD PROPERTY_BACKING_FIELD name:x type:kotlin.Int visibility:public flags:final
+        BFIELD:Test1.x#field
+
+        FUN DEFAULT_PROPERTY_ACCESSOR name:<get-x> visibility:public modality:FINAL <> ($this:Test1) returnType:kotlin.Int flags:
+        FUN:Test1.x.<get-x>();kotlin.Int
+            VALUE_PARAMETER name:<this> type:Test1 flags:
+            VPARAM:Test1.x.<get-x>()#<this>;Test1
+
+
+
+    ENUM_ENTRY name:ZERO
+    ENUM_ENTRY:Test1.ZERO
+
+    ENUM_ENTRY name:ONE
+    ENUM_ENTRY:Test1.ONE
+
+    CONSTRUCTOR visibility:private <> () returnType:Test1 flags:
+    CTOR:Test1.Test1();Test1
+
+    FUN ENUM_CLASS_SPECIAL_MEMBER name:values visibility:public modality:FINAL <> () returnType:kotlin.Array<Test1> flags:
+    FUN:Test1.values();kotlin.Array<Test1>
+
+    FUN ENUM_CLASS_SPECIAL_MEMBER name:valueOf visibility:public modality:FINAL <> (value:kotlin.String) returnType:Test1 flags:
+    FUN:Test1.valueOf(kotlin.String);Test1
+        VALUE_PARAMETER name:value index:0 type:kotlin.String flags:
+        VPARAM:Test1.valueOf(kotlin.String)#value;kotlin.String
+
+
+
+CLASS ENUM_CLASS name:Test2 modality:FINAL visibility:public flags: superTypes:[kotlin.Enum<Test2>]
+ENUM:Test2
+    CONSTRUCTOR visibility:private <> (x:kotlin.Int) returnType:Test2 flags:primary
+    CTOR:Test2.Test2(kotlin.Int);Test2
+        VALUE_PARAMETER name:x index:0 type:kotlin.Int flags:
+        VPARAM:Test2.Test2(kotlin.Int)#x;kotlin.Int
+
+
+    PROPERTY name:x visibility:public modality:FINAL flags:val
+    PROP:Test2.x;kotlin.Int
+        FIELD PROPERTY_BACKING_FIELD name:x type:kotlin.Int visibility:public flags:final
+        BFIELD:Test2.x#field
+
+        FUN DEFAULT_PROPERTY_ACCESSOR name:<get-x> visibility:public modality:FINAL <> ($this:Test2) returnType:kotlin.Int flags:
+        FUN:Test2.x.<get-x>();kotlin.Int
+            VALUE_PARAMETER name:<this> type:Test2 flags:
+            VPARAM:Test2.x.<get-x>()#<this>;Test2
+
+
+
+    ENUM_ENTRY name:ZERO
+    ENUM_ENTRY:Test2.ZERO
+        CLASS ENUM_ENTRY name:ZERO modality:FINAL visibility:public flags: superTypes:[Test2]
+        ENUM_ENTRY:Test2.ZERO
+            CONSTRUCTOR visibility:private <> () returnType:Test2.ZERO flags:primary
+            CTOR:Test2.ZERO.ZERO();Test2.ZERO
+
+            FUN name:foo visibility:public modality:OPEN <> ($this:Test2.ZERO) returnType:kotlin.Unit flags:
+            FUN:Test2.ZERO.foo();kotlin.Unit
+                VALUE_PARAMETER name:<this> type:Test2.ZERO flags:
+                VPARAM:Test2.ZERO.foo()#<this>;Test2.ZERO
+
+
+
+
+    ENUM_ENTRY name:ONE
+    ENUM_ENTRY:Test2.ONE
+        CLASS ENUM_ENTRY name:ONE modality:FINAL visibility:public flags: superTypes:[Test2]
+        ENUM_ENTRY:Test2.ONE
+            CONSTRUCTOR visibility:private <> () returnType:Test2.ONE flags:primary
+            CTOR:Test2.ONE.ONE();Test2.ONE
+
+            FUN name:foo visibility:public modality:OPEN <> ($this:Test2.ONE) returnType:kotlin.Unit flags:
+            FUN:Test2.ONE.foo();kotlin.Unit
+                VALUE_PARAMETER name:<this> type:Test2.ONE flags:
+                VPARAM:Test2.ONE.foo()#<this>;Test2.ONE
+
+
+
+
+    CONSTRUCTOR visibility:private <> () returnType:Test2 flags:
+    CTOR:Test2.Test2();Test2
+
+    FUN name:foo visibility:public modality:ABSTRACT <> ($this:Test2) returnType:kotlin.Unit flags:
+    FUN:Test2.foo();kotlin.Unit
+        VALUE_PARAMETER name:<this> type:Test2 flags:
+        VPARAM:Test2.foo()#<this>;Test2
+
+
+    FUN ENUM_CLASS_SPECIAL_MEMBER name:values visibility:public modality:FINAL <> () returnType:kotlin.Array<Test2> flags:
+    FUN:Test2.values();kotlin.Array<Test2>
+
+    FUN ENUM_CLASS_SPECIAL_MEMBER name:valueOf visibility:public modality:FINAL <> (value:kotlin.String) returnType:Test2 flags:
+    FUN:Test2.valueOf(kotlin.String);Test2
+        VALUE_PARAMETER name:value index:0 type:kotlin.String flags:
+        VPARAM:Test2.valueOf(kotlin.String)#value;kotlin.String
+
+
+

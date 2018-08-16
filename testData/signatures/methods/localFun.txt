@@ -1,0 +1,45 @@
+FUN name:outer visibility:public modality:FINAL <TT> () returnType:kotlin.Unit flags:
+FUN:<TT>outer();kotlin.Unit
+    TYPE_PARAMETER name:TT index:0 variance: superTypes:[kotlin.Any?]
+    TPARAM:<TT>outer()~TT
+
+    FUN name:test1 visibility:local modality:FINAL <T> (i:kotlin.Int, j:T) returnType:kotlin.Unit flags:
+    FUN:<TT>outer().<T>test1(kotlin.Int, T);kotlin.Unit
+        TYPE_PARAMETER name:T index:0 variance: superTypes:[kotlin.Any?]
+        TPARAM:<TT>outer().<T>test1(kotlin.Int, T)~T
+
+        VALUE_PARAMETER name:i index:0 type:kotlin.Int flags:
+        VPARAM:<TT>outer().<T>test1(kotlin.Int, T)#i;kotlin.Int
+
+        VALUE_PARAMETER name:j index:1 type:T flags:
+        VPARAM:<TT>outer().<T>test1(kotlin.Int, T)#j;<TT>outer().<T>test1(kotlin.Int, T)~T
+
+
+    FUN name:test2 visibility:local modality:FINAL <> (i:kotlin.Int, j:kotlin.String) returnType:kotlin.Unit flags:
+    FUN:<TT>outer().test2(kotlin.Int, kotlin.String);kotlin.Unit
+        VALUE_PARAMETER name:i index:0 type:kotlin.Int flags:
+        VPARAM:<TT>outer().test2(kotlin.Int, kotlin.String)#i;kotlin.Int
+
+        VALUE_PARAMETER name:j index:1 type:kotlin.String flags:
+        VPARAM:<TT>outer().test2(kotlin.Int, kotlin.String)#j;kotlin.String
+
+
+    FUN name:test3 visibility:local modality:FINAL <> (args:kotlin.Array<out kotlin.String>) returnType:kotlin.Unit flags:
+    FUN:<TT>outer().test3(kotlin.Array<out kotlin.String>);kotlin.Unit
+        VALUE_PARAMETER name:args index:0 type:kotlin.Array<out kotlin.String> varargElementType:kotlin.String flags:vararg
+        VPARAM:<TT>outer().test3(kotlin.Array<out kotlin.String>)#args;kotlin.Array<out kotlin.String>
+
+
+    FUN name:textExt1 visibility:local modality:FINAL <> ($receiver:kotlin.String, i:kotlin.Int, j:TT) returnType:kotlin.Unit flags:
+    FUN:<TT>outer().textExt1(kotlin.Int, <TT>outer()~TT);kotlin.Unit
+        VALUE_PARAMETER name:<this> type:kotlin.String flags:
+        VPARAM:<TT>outer().textExt1(kotlin.Int, <TT>outer()~TT)#<this>;kotlin.String
+
+        VALUE_PARAMETER name:i index:0 type:kotlin.Int flags:
+        VPARAM:<TT>outer().textExt1(kotlin.Int, <TT>outer()~TT)#i;kotlin.Int
+
+        VALUE_PARAMETER name:j index:1 type:TT flags:
+        VPARAM:<TT>outer().textExt1(kotlin.Int, <TT>outer()~TT)#j;<TT>outer()~TT
+
+
+

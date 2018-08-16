@@ -1,0 +1,12 @@
+CLASS CLASS name:C modality:FINAL visibility:public flags: superTypes:[kotlin.Any]
+CLASS:C
+    CONSTRUCTOR visibility:public <> () returnType:C flags:
+    CTOR:C.C();C
+
+    CONSTRUCTOR visibility:public <> (x:kotlin.Int) returnType:C flags:
+    CTOR:C.C(kotlin.Int);C
+        VALUE_PARAMETER name:x index:0 type:kotlin.Int flags:
+        VPARAM:C.C(kotlin.Int)#x;kotlin.Int
+
+
+

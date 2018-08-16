@@ -1,0 +1,39 @@
+CLASS CLASS name:Base1 modality:ABSTRACT visibility:public flags: superTypes:[kotlin.Any]
+CLASS:Base1<T>
+    TYPE_PARAMETER name:T index:0 variance: superTypes:[Derived1]
+    TPARAM:Base1<T>~T
+
+    CONSTRUCTOR visibility:public <> () returnType:Base1<T> flags:primary
+    CTOR:Base1<T>.Base1();Base1<T>
+
+
+CLASS CLASS name:Derived1 modality:FINAL visibility:public flags: superTypes:[Base1<Derived1>]
+CLASS:Derived1
+    CONSTRUCTOR visibility:public <> () returnType:Derived1 flags:primary
+    CTOR:Derived1.Derived1();Derived1
+
+
+CLASS CLASS name:Base2 modality:ABSTRACT visibility:public flags: superTypes:[kotlin.Any]
+CLASS:Base2
+    CONSTRUCTOR visibility:public <> () returnType:Base2 flags:primary
+    CTOR:Base2.Base2();Base2
+
+    FUN name:foo visibility:public modality:FINAL <T> ($this:Base2, x:T) returnType:kotlin.Unit flags:
+    FUN:Base2.<T>foo(T);kotlin.Unit
+        TYPE_PARAMETER name:T index:0 variance: superTypes:[Derived2]
+        TPARAM:Base2.<T>foo(T)~T
+
+        VALUE_PARAMETER name:<this> type:Base2 flags:
+        VPARAM:Base2.<T>foo(T)#<this>;Base2
+
+        VALUE_PARAMETER name:x index:0 type:T flags:
+        VPARAM:Base2.<T>foo(T)#x;Base2.<T>foo(T)~T
+
+
+
+CLASS CLASS name:Derived2 modality:FINAL visibility:public flags: superTypes:[Base2]
+CLASS:Derived2
+    CONSTRUCTOR visibility:public <> () returnType:Derived2 flags:primary
+    CTOR:Derived2.Derived2();Derived2
+
+

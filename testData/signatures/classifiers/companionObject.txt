@@ -1,0 +1,24 @@
+CLASS CLASS name:Test1 modality:FINAL visibility:public flags: superTypes:[kotlin.Any]
+CLASS:Test1
+    CONSTRUCTOR visibility:public <> () returnType:Test1 flags:primary
+    CTOR:Test1.Test1();Test1
+
+    CLASS OBJECT name:Companion modality:FINAL visibility:public flags:companion superTypes:[kotlin.Any]
+    OBJ:Test1.Companion
+        CONSTRUCTOR visibility:private <> () returnType:Test1.Companion flags:primary
+        CTOR:Test1.Companion.Companion();Test1.Companion
+
+
+
+CLASS CLASS name:Test2 modality:FINAL visibility:public flags: superTypes:[kotlin.Any]
+CLASS:Test2
+    CONSTRUCTOR visibility:public <> () returnType:Test2 flags:primary
+    CTOR:Test2.Test2();Test2
+
+    CLASS OBJECT name:Named modality:FINAL visibility:public flags:companion superTypes:[kotlin.Any]
+    OBJ:Test2.Named
+        CONSTRUCTOR visibility:private <> () returnType:Test2.Named flags:primary
+        CTOR:Test2.Named.Named();Test2.Named
+
+
+
