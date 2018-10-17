@@ -21,6 +21,8 @@ import java.io.File
  */
 open class AbstractSignaturesGeneratorTest {
     protected fun doTest(filePath: String) {
+        System.setProperty("java.awt.headless", "true")
+
         val inputFile = File(filePath)
         val expectedOutputFile = inputFile.parentFile.resolve(inputFile.name.replace(".kt", ".txt"))
         val expectedText = expectedOutputFile.readText()
@@ -38,7 +40,7 @@ open class AbstractSignaturesGeneratorTest {
     }
 
     private fun runKotlinCompilerWithKythePlugin(file: File): String {
-        val compilerWrapper = KotlinCompilerCliWrapper.createWithDefaultPaths()
+        val compilerWrapper = InProcessKotlinCompilerWrapper.createWithDefaultPaths()
         return compilerWrapper.executeWithKythePlugin(listOf(file), TEST_SIGNATURES_ARGUMENT to "true").assertZeroExitCode()
     }
 }
