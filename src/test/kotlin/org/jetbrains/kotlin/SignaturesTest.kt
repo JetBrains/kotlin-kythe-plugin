@@ -122,4 +122,10 @@ class SignaturesGeneratorTestGenerated : AbstractSignaturesGeneratorTest() {
     fun testTypeParameterBoundedBySubclass() {
         doTest("testData/signatures/typeParameters/typeParameterBoundedBySubclass.kt")
     }
+
+    @Test
+    fun testFromBeth() {
+        doTest("testData/signatures/typeParameters/testFromBeth.kt")
+    }
+
 }

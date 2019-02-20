@@ -80,4 +80,10 @@ class KytheIndexTestGenerated : AbstractKytheIndexTest() {
     fun testKotlinAgainstKotlin() {
         doTest("testData/indexer/multifile/kotlinAgainstKotlin")
     }
+
+    @Test
+    @Throws(Exception::class)
+    fun testKotlinAgainstJava() {
+        doTest("testData/indexer/multifile/kotlinAgainstJava")
+    }
 }

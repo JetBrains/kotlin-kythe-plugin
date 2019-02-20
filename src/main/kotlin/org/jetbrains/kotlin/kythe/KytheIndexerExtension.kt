@@ -10,6 +10,10 @@ import com.google.devtools.kythe.extractors.shared.FileVNames
 import com.google.devtools.kythe.platform.shared.StatisticsCollector
 import com.intellij.openapi.project.Project
 import org.jetbrains.kotlin.analyzer.AnalysisResult
+import org.jetbrains.kotlin.backend.jvm.JvmBackendContext
+import org.jetbrains.kotlin.codegen.ClassBuilderFactories
+import org.jetbrains.kotlin.codegen.state.GenerationState
+import org.jetbrains.kotlin.config.CompilerConfiguration
 import org.jetbrains.kotlin.config.LanguageVersionSettings
 import org.jetbrains.kotlin.config.LanguageVersionSettingsImpl
 import org.jetbrains.kotlin.descriptors.ModuleDescriptor
@@ -46,6 +50,22 @@ class KytheIndexerExtension(
         val psi2ir = Psi2IrTranslator(LanguageVersionSettingsImpl.DEFAULT, Psi2IrConfiguration(ignoreErrors = true))
         val generatorContext = psi2ir.createGeneratorContext(module, bindingTrace.bindingContext)
         val ir = psi2ir.generateModuleFragment(generatorContext, files)
+
+        val generationState = GenerationState.Builder(
+                project,
+                ClassBuilderFactories.TEST,
+                module,
+                bindingTrace.bindingContext,
+                files.toList(),
+                CompilerConfiguration()
+        ).build()
+
+        val jvmBackendContext = JvmBackendContext(
+                generationState,
+                generatorContext.sourceManager,
+                generatorContext.irBuiltIns, ir,
+                generatorContext.symbolTable
+        )
 
         File(destination).outputStream().use { stream ->
             val factEmitter = StreamFactEmitter(stream)
