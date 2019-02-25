@@ -43,5 +43,10 @@ open class AbstractSignaturesGeneratorTest {
         val compilerWrapper = InProcessKotlinCompilerWrapper.createWithDefaultPaths()
         return compilerWrapper.executeWithKythePlugin(listOf(file), TEST_SIGNATURES_ARGUMENT to "true").assertZeroExitCode()
     }
+
+    fun runKotlinCompilerWithKythePlugin(files: List<File>): String {
+        val compilerWrapper = InProcessKotlinCompilerWrapper.createWithDefaultPaths()
+        return compilerWrapper.executeWithKythePlugin(files, TEST_SIGNATURES_ARGUMENT to "true").assertZeroExitCode()
+    }
 }
 

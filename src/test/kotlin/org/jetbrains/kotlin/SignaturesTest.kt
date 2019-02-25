@@ -1,6 +1,8 @@
 package org.jetbrains.kotlin
 
+import org.jetbrains.kotin.test.FileComparisonFailure
 import org.junit.Test
+import java.io.File
 
 class SignaturesGeneratorTestGenerated : AbstractSignaturesGeneratorTest() {
     @Test
@@ -126,6 +128,17 @@ class SignaturesGeneratorTestGenerated : AbstractSignaturesGeneratorTest() {
     @Test
     fun testFromBeth() {
         doTest("testData/signatures/typeParameters/testFromBeth.kt")
+    }
+
+    @Test
+    fun testKotlinAgainstJava() {
+        val filePath = "testData/indexer/multifile/kotlinAgainstJava"
+
+        System.setProperty("java.awt.headless", "true")
+
+        val inputFile = File(filePath)
+
+        runKotlinCompilerWithKythePlugin(inputFile.listFiles().asList())
     }
 
 }

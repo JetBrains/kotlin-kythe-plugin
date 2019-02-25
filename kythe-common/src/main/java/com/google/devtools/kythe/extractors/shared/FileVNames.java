@@ -65,10 +65,10 @@ public class FileVNames {
   private final List<BaseFileVName> baseVNames;
 
   private FileVNames(List<BaseFileVName> baseVNames) {
-    Preconditions.checkNotNull(baseVNames);
+//    Preconditions.checkNotNull(baseVNames);
     for (BaseFileVName b : baseVNames) {
-      Preconditions.checkNotNull(b.pattern, "pattern == null for base VName: %s", b.vname);
-      Preconditions.checkNotNull(b.vname, "vname template == null for pattern: %s", b.pattern);
+//      Preconditions.checkNotNull(b.pattern, "pattern == null for base VName: %s", b.vname);
+//      Preconditions.checkNotNull(b.vname, "vname template == null for pattern: %s", b.pattern);
     }
     this.baseVNames = baseVNames;
   }

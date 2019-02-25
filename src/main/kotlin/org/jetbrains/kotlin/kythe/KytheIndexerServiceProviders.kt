@@ -25,21 +25,21 @@ object KytheIndexerConfigurationKeys {
 
 object KytheIndexerCliOptions {
     val OUTPUT = CliOption(
-            name = "output",
+            optionName = "output",
             valueDescription = "<path>",
             description = "Path to save emitted entries",
             required = false
     )
 
     val ROOT = CliOption(
-            name = "root",
+            optionName = "root",
             valueDescription = "<path>",
             description = "Corpus root",
             required = false
     )
 
     val TEST_SIGNATURES = CliOption(
-            name = "test-signatures",
+            optionName = "test-signatures",
             valueDescription = "<path>",
             description = "Path to file with test-data on signatures",
             required = false

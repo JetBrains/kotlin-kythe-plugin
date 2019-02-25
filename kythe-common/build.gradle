@@ -7,6 +7,9 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    maven {
+        url  "https://dl.bintray.com/kotlin/kotlin-dev"
+    }
 }
 
 dependencies {

@@ -8,7 +8,9 @@ import org.jetbrains.kotlin.config.LanguageVersionSettingsImpl
 import org.jetbrains.kotlin.descriptors.ModuleDescriptor
 import org.jetbrains.kotlin.ir.IrElement
 import org.jetbrains.kotlin.ir.declarations.*
-import org.jetbrains.kotlin.ir.expressions.IrBody
+import org.jetbrains.kotlin.ir.declarations.impl.IrModuleFragmentImpl
+import org.jetbrains.kotlin.ir.expressions.*
+import org.jetbrains.kotlin.ir.expressions.impl.IrIfThenElseImpl
 import org.jetbrains.kotlin.ir.util.render
 import org.jetbrains.kotlin.ir.visitors.IrElementVisitor
 import org.jetbrains.kotlin.kythe.signatures.KotlinSignaturesProvider
@@ -32,8 +34,18 @@ class SignatureTestExtension : AnalysisHandlerExtension {
         val generatorContext = psi2ir.createGeneratorContext(module, bindingTrace.bindingContext)
         val ir = psi2ir.generateModuleFragment(generatorContext, files)
 
-        val file = files.single()
-        doTest(ir, File(file.virtualFilePath), generatorContext)
+        val file = ((ir as IrModuleFragmentImpl).files as java.util.ArrayList<*>)[0] as IrFile
+        val castingClass = file.declarations[0] as IrClass
+        val fooFunction = castingClass.declarations[1] as IrFunction
+        val ifStatement = (fooFunction.body as IrBlockBody).statements[0] as IrIfThenElseImpl
+        val variableDeclaration = (ifStatement.branches[0].result as IrBlock).statements[0] as IrVariable
+        val asOperator = variableDeclaration.initializer as IrTypeOperatorCall
+        val objCharsGetField = asOperator.argument as IrGetField
+        val charsField = objCharsGetField.symbol.owner
+        println(charsField.parent)
+
+//        val file = files.single()
+//        doTest(ir, File(file.virtualFilePath), generatorContext)
 
         return AnalysisResult.success(bindingTrace.bindingContext, module, shouldGenerateCode = false)
     }
